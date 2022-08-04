@@ -1,0 +1,83 @@
+.MuiTableRow-root > * {
+  padding: 10px;
+}
+
+.MuiTableRow-root.MuiTableRow-head > * {
+  font-weight: bold !important;
+}
+
+.Table td,
+th {
+  border: none !important;
+}
+
+.Table:first-child {
+  border-radius: 0.7rem !important;
+}
+.status {
+  padding: 8px;
+  border-radius: 9px;
+}
+
+.Details {
+  color: #00b5ff !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .Table {
+    width: 170%;
+    margin-top: 2rem;
+  }
+}
+
+/* 
+@media screen and (min-width: 1200px) {
+  .Admin_Cards{
+    position:relative;
+    top:8%;
+    bottom:0;
+    right:0;
+    left:0;
+  }
+  
+} */
+
+
+@media screen and (max-width: 768px) {
+  .Table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23rem;
+  }
+}
+
+.css-1jbbcbn-MuiDataGrid-columnHeaderTitle{
+  font-weight: 800;
+}
+
+.vendor_list_table{
+  border-radius: 0.7rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  overflow:visible
+
+}
+.vendor_table{
+ background: linear-gradient(
+  106.37deg,
+  #ffe1bc 29.63%,
+  #ffcfd1 51.55%,
+  #f3c6f1 90.85%
+);   width: 100%;
+height:100vh ;
+}
+
+
+/* color: var(--black);
+
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center; */

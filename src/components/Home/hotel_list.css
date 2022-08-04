@@ -1,0 +1,221 @@
+.sub-header{
+    background: linear-gradient(#1081c0,#003c75);
+}
+.app{
+    margin-left: 50px;
+    font-size: 14px;
+    color: white;
+    margin-top: 25px;
+}
+h4{
+    color: #003c75;
+    font-weight: 500;
+    font-size: 1.28 rem;
+}
+.hotel-card{
+    margin-bottom: 20px;
+    padding: 14px;
+}
+.hotel_list{
+    margin-top: 10px;
+    background-color:white;
+    border:1px solid rgb(218, 218, 218);
+    height: 200px;
+    display: flex;
+}
+
+.card-box{
+    padding-top: 10px;
+}
+/* .img-holder{
+    background-color: fffff;
+    border-radius: 2px;
+    box-sizing: black;
+    display: block;
+    flex-basis: 220px;
+    height: 180px;
+    line-height: 21px;
+    margin-right: 20px;
+    min-width: 220px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 10px 10px 10px 10px;
+} */
+ .img{
+    max-width: none;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    overflow-x: hidden;
+}
+.icn-holder{
+    padding: 0px 10px 14px 0;
+    min-height: 50px;
+}
+.hotel-price{
+    font-size: 24px;
+    color: #009b59;
+    font-weight: 600;
+    letter-spacing:3px
+}
+.icn{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid gray;
+}
+.bt {
+    background-color: #3b72c4;
+    border: none;
+    color: white;
+    padding: 5px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+.twelve{
+    width: 75%;
+}
+.content-holder{
+    box-sizing :border-box;
+color :rgb(74, 74, 74);
+display :flex;
+font-family: Poppins, sans-serif;
+font-size :14px;
+height :180px;
+line-height: 21px;
+text-size-adjust :100%;
+width :606.688px;
+-webkit-box-direction :normal;
+}
+.imgee{
+ background-color: rgb(216, 216, 216);
+border-bottom-left-radius: 2px;
+border-bottom-right-radius: 2px;
+border-top-left-radius :2px;
+border-top-right-radius :2px;
+box-sizing :border-box;
+color :rgb(74, 74, 74);
+display: block;
+flex-basis :220px;
+flex-grow :0;
+flex-shrink: 0;
+font-family :Poppins, sans-serif;
+font-size :14px;
+height :180px;
+line-height: 21px;
+margin-right: 20px;
+min-width :220px;
+overflow-x :hidden;
+overflow-y :hidden;
+position :relative;
+text-size-adjust: 100%;
+width :220px;
+-webkit-box-direction: normal;
+}
+.imgee>img{
+        max-width: none;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+}
+.flex-full {
+    box-sizing :border-box;
+color :rgb(74, 74, 74);
+display: block;
+flex-grow :1;
+font-family: Poppins, sans-serif;
+font-size :14px;
+height: 180px;
+line-height: 21px;
+text-size-adjust :100%;
+width :366.688px;
+-webkit-box-direction :normal;
+-webkit-box-flex :1;
+}
+.box-card{
+    padding: 10px;
+    box-shadow: 0 0 2px #d4d4d4;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #fff
+}
+.gride{
+    display: flex;
+    webkit-box-orient: horizontal;
+    webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    padding: 0;
+    margin: -1rem;
+}
+.twelve{
+    width: 75%!important;
+    display: block;
+    padding: 14px 14px 14px 14px;
+    position: relative;
+    text-size-adjust: 100%;
+    vertical-align: top;
+    width: 634.688px;
+}
+.box-card .img-holder{
+    min-width: 220px;
+    flex: 0 0 220px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+    margin-right: 20px;
+    background-color: red;
+}
+.content-holder{
+    display: flex;
+}
+.box-card .img-holder .img{
+    max-width: none;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    border-style: none;
+}
+.mh95 {
+    min-height: 95px;
+}
+h3 {
+    margin: 0;
+    color: #003c75;
+    font-weight: 500;
+}
+.search-result .h3{
+    font-size: 18px;
+}
+.hotel-name{
+    color: rgb(0, 60, 117);
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.hotel-address{
+    color: rgb(74, 74, 74);
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+}
+
+.hotel_icon i{
+    margin-right: 5px;
+   color: #fbbd08;
+}
+
