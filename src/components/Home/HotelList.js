@@ -1,10 +1,11 @@
 import "./hotel_list.css";
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Button, FormControlLabel, Grid, Paper, Radio, RadioGroup, Slider, TextField, Typography } from "@mui/material";
 import SearchHeader from "./SearchHeader";
 import SearchedHotelList from "./HotelList/SearchedHotelList";
+import {API} from "../../utils/fetchData";
+
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -29,7 +30,7 @@ const HotelList = () => {
   const [sliderMin, setSliderMin] = useState(500);
   const [priceRange, setPriceRange] = useState([sliderMin, sliderMax]);
   useEffect(() => async () => {
-    const res = await axios.get(`api/search?address=${hotelQuery.address}`)
+    const res = await API.get(`api/search?address=${hotelQuery.address}`)
     setHotelData(res.data);  
     const maxPrice = res?.data?.hotels?.reduce((acc, curr) => {
       return acc > curr.price ? acc : curr.price
@@ -50,7 +51,7 @@ const HotelList = () => {
       sort: e.target.value,
       hotelSearch: hotelQuery.hotelSearch,
     }
-    const res = await axios.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}&price[gte]=${sliderMin}&price[lte]=${sliderMax}`);
+    const res = await API.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}&price[gte]=${sliderMin}&price[lte]=${sliderMax}`);
     setHotelData(res.data)
   };
   const handleSearch = async (e) => {
@@ -62,11 +63,11 @@ const HotelList = () => {
       sort,
       hotelSearch: e.target.value
     }
-    const res = await axios.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}&price[gte]=${sliderMin}&price[lte]=${sliderMax}`);
+    const res = await API.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}&price[gte]=${sliderMin}&price[lte]=${sliderMax}`);
     setHotelData(res.data)
   }
   const buildRangeFilter = async (newValue) => {
-    const urlFilter = await axios.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}&price[gte]=${newValue[0]}&price[lte]=${newValue[1]}`);
+    const urlFilter = await API.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}&price[gte]=${newValue[0]}&price[lte]=${newValue[1]}`);
     setHotelData(urlFilter.data)
   };
   const handlePriceInputChange = (e, type) => {
@@ -91,7 +92,7 @@ const HotelList = () => {
   const clearAllFilters = async () => {
     setPriceRange([sliderMin, sliderMax]);
     setHotelNameSearch("");
-    const res = await axios.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}`)
+    const res = await API.get(`api/search?address=${hotelQuery.address}&sort=${hotelQuery.sort}`)
     setHotelData(res.data);
   };
   const searchInfoData = {

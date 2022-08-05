@@ -6,12 +6,12 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { Link, useNavigate } from "react-router-dom"
-import axios from "axios";
 import { useDispatch } from "react-redux"
 import { GLOBALTYPES } from "../../redux/actions/globalTypes"
 import { Grid } from '@mui/material';
 import useStyles from './homeStyle';
 import moment from "moment";
+import { API } from "../../utils/fetchData";
 
 const Home = ({ searchData }) => {
   const classNamees = useStyles();
@@ -60,7 +60,7 @@ const Home = ({ searchData }) => {
     }
 
     dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } })
-    const res = await axios.get(`api/search?address=${search}`)
+    const res = await API.get(`api/search?address=${search}`)
 
     if (res.status === 200 && res.data.status === "failed") {
       dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: false } })
