@@ -3,9 +3,6 @@ import axios from 'axios'
 export const API=axios.create({
     baseURL:"https://nepaltrip-backend.herokuapp.com"
 })
-
-
-
 export const getDataAPI = async (url, token) => {
     const res = await API.get(`/api/${url}`, {
         headers: { Authorization: token}    

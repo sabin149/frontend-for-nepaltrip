@@ -11,7 +11,7 @@ import { GLOBALTYPES } from "../../redux/actions/globalTypes"
 import { Grid } from '@mui/material';
 import useStyles from './homeStyle';
 import moment from "moment";
-import { API } from "../../utils/fetchData";
+import axios from "axios";
 
 const Home = ({ searchData }) => {
   const classNamees = useStyles();
@@ -60,7 +60,7 @@ const Home = ({ searchData }) => {
     }
 
     dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } })
-    const res = await API.get(`api/search?address=${search}`)
+    const res = await axios.get(`https://nepaltrip-backend.herokuapp.com/api/search?address=${search}`)
 
     if (res.status === 200 && res.data.status === "failed") {
       dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: false } })
@@ -89,7 +89,11 @@ const Home = ({ searchData }) => {
               <div className={classNamees.headerSearchItem}>
                 <span className="me-2"></span>
                 <i className="fa-solid fa-location-dot "></i>
-                <input value={search} onChange={(e) => setSearch(e.target.value)}
+                <input value={search} onChange={
+                  (e) => setSearch(
+                    e.target.value.replace(/\b\w/g, l => l.toUpperCase())
+                  )
+                }
                   type="text"
                   placeholder="Where are you going?"
                   className="headerSearchInput"
