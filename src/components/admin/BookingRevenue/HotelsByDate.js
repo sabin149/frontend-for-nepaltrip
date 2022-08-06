@@ -27,8 +27,10 @@ const HotelsByDate = ({ hotel }) => {
     name:"Hotels",
     Hotels: [
       {
-        data: [5,12,15,20,18,20,35],
+        data: [5,12,15,20,25,18,20,35,50,55,45,60],
+         name:"Bookings",
       },
+     
     ],
     options: {
       chart: {
